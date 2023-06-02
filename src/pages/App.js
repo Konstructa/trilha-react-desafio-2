@@ -28,15 +28,11 @@ function App() {
         setCurrentRepo('')
         return
       }
-    }  else {
-      console.log('Não encontrado')
-      console.log('Repetido')
-    }
+    } 
 
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
 
     const isExist = repos?.find(repo => repo.id === id);
 
@@ -57,9 +53,11 @@ function App() {
       <img src={gitLogo} width={72} height={72} alt="github logo"/>
       <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)} />
       <Button onClick={handleSearchRepo}/>
-      {repos?.length ? repos.map(repo => 
+      {repos?.length 
+      ? repos.map(repo => 
         <ItemRepo handleRemoveRepo={handleRemoveRepo} repo={repo} key={repo.id}
-      />) : <h3>Nenhum repositório encontrado</h3>}
+      />) 
+      : <h3>Nenhum repositório encontrado</h3>}
     </Container>
   );
 }
