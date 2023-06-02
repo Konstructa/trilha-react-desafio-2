@@ -23,4 +23,15 @@ export const ItemContainer = styled.div`
         color: #FAFAFA60;
         margin: 20px 0;
     }
+
+    button {
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        margin-top: 15px;
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
 `
